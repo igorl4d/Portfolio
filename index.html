@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link href="style.css" rel="stylesheet" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <img
+          class="menu-hamburguer"
+          src="assets/menu-hamburguer.svg"
+          id="menuHamburguer"
+        />
+        <nav>
+          <ul class="nav-ul">
+            <li><a href="#sobre-mim" class="nav-li">Sobre Mim</a></li>
+            <li><a href="#projetos" class="nav-li">Projetos</a></li>
+            <li><a href="#habilidades" class="nav-li">Habilidades</a></li>
+            <li>
+              <a href="#experiencias" class="nav-li">Educação e Experiencias</a>
+            </li>
+          </ul>
+        </nav>
+        </nav>
+
+        <label class="switch">
+          <input type="checkbox" onclick="dayMode()" id="toggleSwitch" />
+          <span class="slider round"></span>
+        </label>
+      </header>
+
+      <section id="inicial">
+        <div class="container-inicial">
+          <div class="texto-inicial">
+            <p>Meu nome é</p>
+            <h1>IGOR LIMA PEREIRA</h1>
+            <h2>Desenvolvedor fullstack em formação</h2>
+            <a href="https://api.whatsapp.com/send?phone=+55%2098%208100-4524&text=Sua%20mensagem" class="fale-comigo"
+              ><img src="assets/whatsapp-brands 1.svg" />Fale Comigo</a
+            >
+          </div>
+
+          <div class="imagem-inicial">
+            <img src="assets/Group 3.svg" />
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-mim" class="sectOff">
+        <div class="container-sobre">
+          <div class="imagem-sobre">
+            <img src="assets/foto-perfiil 1.png" />
+          </div>
+
+          <div class="texto-sobre">
+            <h2>Sobre Mim</h2>
+            <p>
+              Olá, me chamo Igor Lima Pereira, sou um programador autodidata e apaixonado por tudo envolvendo tecnologia e inovação! Sou bolsista Pesquisador do estado do Maranhão, participando do programa Trilhas Inova, um programa de capacitação de programadores, designers e cientistas de dados (Faço parte da trilha de programação). Possuo conhecimentos de front-end e back-end, já realizei alguns projetos de freelance envolvendo a micro framework Flask .Atualmente tenho seguido a trilha de formação Full-stack da Alura, tendo encerrado a formação Front-end e dando início à trilha de Modelagem de Dados. É um prazer lhe conhecer!
+            </p>
+            <div class="botoes-sobre">
+              <a class="botao" href="https://www.linkedin.com/in/igor-lima-pereira-577872186/"
+                ><img src="assets/linkedin-brands 1.svg" />Linkedin</a
+              >
+              <a class="botao" href="assets/IGOR lIMA pEREIRA (1).pdf"
+                ><img src="assets/Vector.svg" />Currículo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos">
+        <h2 style="margin: 3em 0; text-align: center">Projetos</h2>
+        <div class="container-projetos">
+          <div class="item-projeto">
+            <h3>Lobo Controles</h3>
+            <p>
+              Projeto de freelance para uma pequena empresa de impressões 3D. O projeto desenvolvido foi um site para controle das vendas e pedidos, as tecnologias usadas foram Flask, HTML, CSS3 e SQL.
+            </p>
+            <a href="https://www.linkedin.com/posts/igor-lima-pereira-577872186_python-html-css-activity-6819326185953079297-Sr5R" class="botao">Link do Projeto</a>
+          </div>
+          <div class="item-projeto">
+            <h3>Desafio Inova Maranhão</h3>
+            <p>
+              Primeiro desafio do programa Trilhas Inova Maranhão, o projeto foi desenvolvido em HTML, CSS e JavaScript e consiste de uma página que deveria ressaltar as belezas do Maranhão, tendo como foco a acessibilidade do site. 
+            </p>
+            <a href="https://www.linkedin.com/posts/igor-lima-pereira-577872186_webdevelopment-css-html-activity-6846064770970329088-ogny" class="botao">Link do Projeto</a>
+          </div>
+
+          <div class="item-projeto">
+            <h3>Teste Desenvolvedor Python</h3>
+            <p>
+              Desafio prático para uma vaga de desenvolvedor Python Junior! O desafio era desenvolver um bot do telegram que deveria fazer contato com os clientes e uma API que insere os dados desses clientes em um banco de dados.
+            </p>
+            <a href="https://www.linkedin.com/posts/igor-lima-pereira-577872186_python-flask-activity-6844264309992787969-BKw9" class="botao">Link do Projeto</a>
+          </div>
+
+          <div class="item-projeto">
+            <h3>LinkTree</h3>
+            <p>
+              Agregador de Links desenvolvido para ser usado na bio do instagram, desenvolvido com HTML, CSS e JavaScript
+            </p>
+            <a href="https://github.com/igorl4d/LinkTree" class="botao">Link do Projeto</a>
+          </div>
+
+          <div class="item-projeto">
+            <h3>CS50-Filter</h3>
+            <p>
+              Programa feito ao curso CS50x de Harvard. O programa é uma aplicação em C que aplica filtros sobre fotos, como filtro preto e branco, sépia, entre outros.
+            </p>
+            <a href="https://github.com/igorl4d/Filter-CS50x" class="botao">Link do Projeto</a>
+          </div>
+
+          <div class="item-projeto">
+            <h3>CS50-Volume</h3>
+            <p>
+              Programa feito ao curso CS50x de Harvard. O programa é uma aplicação em C que recebe como input um arquivo de áudio e aumenta ou diminui o volume do arquivo conforme o input do usuário.
+            </p>
+            <a href="https://github.com/igorl4d/Volume-CS50x" class="botao"
+              >Link do Projeto</a
+            >
+          </div>
+        </div>
+
+        <div class="imagem-astronauta">
+          <img src="assets/undraw_to_the_moon_v1mv 1.svg" />
+        </div>
+      </section>
+    </main>
+
+    <section class="sectOff" id="habilidades">
+      <div class="container-habilidades">
+        <div class="texto-habilidades">
+          <h2>Habilidades</h2>
+          <p>
+            Possuo conhecimentos de Front e Back-end. Meus conhecimentos de front-end incluem HTML, CSS, JavaScript e React inicial. Meus conhecimentos de Back-end incluem, C, Python, Flask, manipulação de bancos de dados, criações de bots de telegram e discord, entre outros. Além disso, possuo um pouco de experiência de prototipação com a Ferramenta Figma.
+          </p>
+        </div>
+
+        <div class="icones-habilidades">
+          <div class="moldura-icone">
+            <img src="assets/icon-html.svg" />
+            <p class = 'html'>HTML</p>
+          </div>
+
+          <div class="moldura-icone">
+            <img src="assets/icon-python.svg" />
+            <p class = 'python'>Python</p>
+          </div>
+
+          <div class="moldura-icone">
+            <img src="assets/icon-js.svg" />
+            <p class = 'javascript'>JavaScript</p>
+          </div>
+
+          <div class="moldura-icone">
+            <img src="assets/icon-css.svg" />
+            <p class="css">CSS3</p>
+          </div>
+
+          <div class="moldura-icone">
+            <img src="assets/icon-figma.svg" />
+            <p class="figma">Figma</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencias">
+      <h2 
+      class ='h2-experiencia'>Educação e Experiencias</h2>
+      <div class="container-experiencias">
+        <div class = 'imagem-experiencia'>
+          <img src = 'assets/undraw_stars_re_6je7 (1) 1.svg'> 
+        </div>
+        <div class = 'imagem-experiencia-2'>
+          <img src = 'assets/undraw_Lost_online_re_upmy (2) 1.svg'> 
+        </div>
+        <div class = 'flex-experiencia'>
+            <div class="item-experiencia">
+              <div class="faixa-item-experiencia">
+                <h3>Cs50 | Harvard</h3>
+              </div>
+              <p>
+                Curso ministrado de forma remota por Harvard. Nesse são feitos 10 laboratórios, 10 projetos e um projeto final, esses que dizem respeito a várias tecnologias como: C, Python, HTML, CSS3, JavaScript, Flask e SQL.
+
+              </p>
+            </div>
+
+            <div class="item-experiencia">
+              <div class="faixa-item-experiencia">
+                <h3>Programa Trilhas Inova | SECTIMA</h3>
+              </div>
+              <p>
+                Curso de formação profissional na área de programação ministrado pela Secretária Estadual de Tecnologia e Informação do Maranhão com previsão de término em dezembro.
+              </p>
+            </div>
+      </div>
+      <div class ='flex-experiencia reverse'>
+        <div class="item-experiencia">
+            <div class="faixa-item-experiencia">
+              <h3>Formação Front-end | Alura</h3>
+            </div>
+            <p>
+              Formação front-end completa da Alura, com carga horária estimada de 170 horas. Nessa formação foram abordadas as tecnologias HTML, CSS e JavaScript. Além de conceitos como acessibilidade web, design thinking, entre outros.  
+            </p>
+          </div>
+          <div class="item-experiencia">
+            <div class="faixa-item-experiencia">
+              <h3>Inglês Fluente</h3>
+            </div>
+            <p>
+              Inglês fluente a nivel de conversação, escrita e entendimento, possuo TOEIC (teste de proficiência internacional) com nota de 860 pontos. Além disso, já tive experiências como professor de inglês em dois colégios distintos. 
+            </p>
+          </div>
+        </div>
+    </div>  
+    <footer>
+      <a href="https://www.linkedin.com/in/igor-lima-pereira-577872186/"><img src="assets/linkedin-brands 1 (1).svg" /></a>
+      <a href="https://www.instagram.com/igorl.pereira?r=nametag"><img src="assets/instagram-square-brands 1.svg" /></a>
+      <a href="https://github.com/igorl4d"><img src="assets/github-square-brands 1.svg" /></a>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>
