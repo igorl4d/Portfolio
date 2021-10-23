@@ -1,60 +1,36 @@
-var itemsNav = document.querySelectorAll('.nav-li');
-var itemsProjeto = document.querySelectorAll('.item-projeto');
-var itemsHabilidade = document.querySelectorAll('.moldura-icone');
-var estado = 0;
+const itemsNav = document.querySelectorAll('.nav-li');
+const itemsProjeto = document.querySelectorAll('.item-projeto');
+const itemsHabilidade = document.querySelectorAll('.moldura-icone');
+const sectOff = document.querySelectorAll('.sectOff');
+const flexExperiencia = document.querySelectorAll('.flex-experiencia');
+
 function dayMode() {
-  document.querySelector('body').style.backgroundColor = 'white';
-  document.querySelector('body').style.color = 'black';
-  document.querySelector('.header').style.backgroundColor = '#EBEBEB';
-  document.querySelector('#sobre-mim').style.backgroundColor = '#EBEBEB';
+  document.querySelector('body').classList.toggle('background-day');
+  document.querySelector('.header').classList.toggle('background-day-gray');
+  document.querySelector('.nav-ul').classList.toggle('background-day-gray');
+
+  for (var i = 0; i < sectOff.length; i++) {
+    sectOff[i].classList.toggle('background-day-gray');
+  }
+
   for (var i = 0; i < itemsNav.length; i++) {
-    itemsNav[i].style.color = '#000000';
+    itemsNav[i].classList.toggle('text-day');
   }
 
   for (var i = 0; i < itemsProjeto.length; i++) {
-    itemsProjeto[i].style.backgroundColor = '#EBEBEB';
+    itemsProjeto[i].classList.toggle('background-day-gray');
   }
-  document.querySelector('#habilidades').style.backgroundColor = '#EBEBEB';
 
   for (var i = 0; i < itemsHabilidade.length; i++) {
-    itemsHabilidade[i].style.backgroundColor = 'white';
+    itemsHabilidade[i].classList.toggle('background-day');
   }
-  document
-    .querySelector('#toggleSwitch')
-    .setAttribute('onclick', 'nightMode()');
 
-  document.querySelector('.flex-experiencia').style.backgroundColor = '#EBEBEB';
-  document.querySelector('.reverse').style.backgroundColor = '#EBEBEB';
-  estado = 1;
+  for (var i = 0; i < flexExperiencia.length; i++) {
+    flexExperiencia[i].classList.toggle('background-day-gray');
+  }
 }
 
-function nightMode() {
-  document.querySelector('body').style.backgroundColor = '#111111';
-  document.querySelector('body').style.color = 'white';
-  document.querySelector('.header').style.backgroundColor = '#2C2C2C';
-  document.querySelector('#sobre-mim').style.backgroundColor = '#2C2C2C';
-  for (var i = 0; i < itemsNav.length; i++) {
-    itemsNav[i].style.color = 'white';
-  }
-
-  for (var i = 0; i < itemsProjeto.length; i++) {
-    itemsProjeto[i].style.backgroundColor = '#2C2C2C';
-  }
-
-  document.querySelector('#habilidades').style.backgroundColor = '#2C2C2C';
-
-  for (var i = 0; i < itemsHabilidade.length; i++) {
-    itemsHabilidade[i].style.backgroundColor = '#111111';
-  }
-
-  document.querySelector('#toggleSwitch').setAttribute('onclick', 'dayMode()');
-
-  estado = 0;
-
-  document.querySelector('.flex-experiencia').style.backgroundColor = '#2C2C2C';
-  document.querySelector('.reverse').style.backgroundColor = '#2C2C2C';
-}
-
+//Menu mobile
 const menuHamburguer = document.querySelector('#menuHamburguer');
 const navUl = document.querySelector('.nav-ul');
 const header = document.querySelector('.header');
@@ -66,11 +42,9 @@ menuHamburguer.addEventListener('click', () => {
   menuHamburguer.classList.toggle('show');
   toggle.classList.toggle('show');
   html.classList.toggle('show');
-  if (estado == 1) {
-    navUl.classList.toggle('light');
-  }
 });
 
+//Fecha menu mobile no redirecionar
 for (var i = 0; i < itemsNav.length; i++) {
   itemsNav[i].addEventListener('click', () => {
     navUl.classList.toggle('show');
@@ -78,34 +52,32 @@ for (var i = 0; i < itemsNav.length; i++) {
     menuHamburguer.classList.toggle('show');
     toggle.classList.toggle('show');
     html.classList.toggle('show');
-
-    if (estado == 1) {
-      navUl.classList.toggle('light');
-    }
   });
 }
 
-itemsHabilidade[0].addEventListener('click', () => {
-  itemsHabilidade[0].classList.toggle('show-hab');
-  document.querySelector('.html').classList.toggle('show-hab');
-});
+//Função dos butões experiencia
+itemsHabilidade.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    tipoItem = e.currentTarget.classList;
 
-itemsHabilidade[1].addEventListener('click', () => {
-  itemsHabilidade[1].classList.toggle('show-hab');
-  document.querySelector('.python').classList.toggle('show-hab');
-});
+    if (tipoItem.contains('html')) {
+      itemsHabilidade[0].classList.toggle('show-hab');
+    }
 
-itemsHabilidade[2].addEventListener('click', () => {
-  itemsHabilidade[2].classList.toggle('show-hab');
-  document.querySelector('.javascript').classList.toggle('show-hab');
-});
+    if (tipoItem.contains('python')) {
+      itemsHabilidade[1].classList.toggle('show-hab');
+    }
 
-itemsHabilidade[3].addEventListener('click', () => {
-  itemsHabilidade[3].classList.toggle('show-hab');
-  document.querySelector('.css').classList.toggle('show-hab');
-});
+    if (tipoItem.contains('javascript')) {
+      itemsHabilidade[2].classList.toggle('show-hab');
+    }
 
-itemsHabilidade[4].addEventListener('click', () => {
-  itemsHabilidade[4].classList.toggle('show-hab');
-  document.querySelector('.figma').classList.toggle('show-hab');
+    if (tipoItem.contains('css')) {
+      itemsHabilidade[3].classList.toggle('show-hab');
+    }
+
+    if (tipoItem.contains('figma')) {
+      itemsHabilidade[4].classList.toggle('show-hab');
+    }
+  });
 });
